@@ -16,6 +16,7 @@ const addElement = (e, node, txt, attr, value) => {
 const searchElements = (e, searchingElements) => {
     e.preventDefault()
     const infoElement = document.querySelector('.result')
+    infoElement.textContent = '';
     const elements = [...document.querySelectorAll(searchingElements)]
     if (elements.length) {
         infoElement.innerHTML = `<h2 class='element__h2'> In this document you have ${elements.length} elements <strong class='element__strong'> ${searchingElements} </strong>. </h2>`
@@ -28,6 +29,21 @@ const searchElements = (e, searchingElements) => {
 }
 
 const showInfo = (elements, infoElement) => {
+    console.log(elements);
+    elements.forEach(element => {
+        const item = document.createElement('div')
+        item.className = 'element__info'
+        item.innerHTML = `
+        <div class='element__item'> element: ${element.nodeName}<div>
+        <div class='element__item'> Class Name: ${element.className}<div>
+        <div class='element__item'> Height: ${element.offsetHeight}<div>
+        <div class='element__item'> Width: ${element.offsetWidth}<div>
+        <div class='element__item'> Top: ${element.offsetTop}<div>
+        <div class='element__item'> Left: ${element.offsetLeft}<div>
+        <div class='element__item'> Scroll Height: ${element.scrollHeight}<div>
+        `
+        infoElement.appendChild(item)
+    })
 
 }
 
