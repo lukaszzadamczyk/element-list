@@ -64,6 +64,7 @@ body {
           justify-content: space-between;
   margin-top: 20px;
   padding: 5px 10px;
+  color: #756262;
 }
 
 .element__input::-webkit-input-placeholder {

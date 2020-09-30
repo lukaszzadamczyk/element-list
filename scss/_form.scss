@@ -21,6 +21,7 @@
         justify-content: space-between;
         margin-top: 20px;
         padding: 5px 10px;
+        color: rgb(117, 98, 98);
 
         &::placeholder {
             color: lighten($color: $main-color, $amount: 25%)
