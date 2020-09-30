@@ -1,3 +1,24 @@
 .result {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    width: 80%;
+    color: white;
+
+    &__h2 {
+        grid-column: 1/-1;
+        padding: 20px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &__info {
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 0 2px 1px white;
+        font-size: 1.2rem;
+    }
 }
